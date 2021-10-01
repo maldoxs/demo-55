@@ -1,0 +1,117 @@
+<!-- svg etiqueta es la encargada de contener, definir y estructurar los elementos que constituyen a
+una imagen SVG.
+
+viewBox: que nos permitirá definir la posición y dimensión de la visión que tendrá el usuario del viewport SVG.
+
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="400px" viewBox="0 0 368 203">
+  <!-- Ahora bien, el elemento que contiene a <style> llamado <defs> permite alojar contenido que no queremos que sea mostrado directamente en el viewport SVG -->
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+      }
+      .cls-2 {
+        fill: #61b94c;
+      }
+      .rectangulo {
+        fill: rgb(0, 0, 255);
+      }
+      .circulo {
+        fill: purple;
+        stroke-width: 5px;
+        stroke: red;
+      }
+      .estrella {
+        fill: lime;
+        stroke: blue;
+        stroke-width: 5;
+      }
+    </style>
+  </defs>
+
+  <!-- etiqueta <g> la cual nos permitirá agrupar varios elementos gráficos en uno 
+-------------------Atributos de <g>--------------------------
+
+1) id="" Esto nos permitirá definir un id específico a cualquier elemento, y en general cumple con las mismas reglas de especificidad de un id en CSS y HTML
+2) data-name="" y nos permitirá describir el contenido del grupo en este caso hay 3 grupos
+3) atributo transform que nos permite manipular diferentes aspectos como el sesgar, rotar o escalar el contenido del grupo.
+-->
+  <g id="Group_113" data-name="Group 113" transform="translate(-3057.509 -3952)">
+    <!-- <path> 
+      es el elemento más poderoso en la biblioteca SVG de formas básicas. Se puede usar para crear líneas, curvas, arcos y más 
+      El elemento <path> se usa para definir una ruta.
+        Los siguientes comandos están disponibles para datos de ruta:
+       ● M = moveto
+       ● L = lineto
+       ● V = vertical lineto
+       ● C = curveto
+       ● S = smooth curveto
+       ● Q = quadratic Bézier curve
+       ● T = smooth quadratic Bézier curveto
+       ● A = elliptical Arc
+       ● Z = closepath
+       ● H = horizontal lineto
+
+       Nota: Todos los comandos anteriores también se pueden expresar con letras más bajas. Las
+      letras mayúsculas significan una posición absoluta, las minúsculas significan una posición
+      relativamente
+
+      Estos elementos se definen con el atributo d="", el cual contiene una serie de instrucciones y
+      parámetros que permiten definir la forma que tendrá el elemento gráfico.
+    -->
+    <path
+      id="Path_1"
+      data-name="Path 1"
+      class="cls-1"
+      d="M392.07,217.823v49.758L401.2,294.96l15,5.5-4.126-37.315,21.5-33.521,1
+3.566-1.548,15.018-34.162-28.739-12.282-.257-.14L429.64,171l-26.317-18.7
+12-19.033-.479-4.877,3.941-9.188-6.94-.126-7.064-5.377-2.811,2.815-8.9-5
+.688-2.655-9.1,4.69-8.689-7.612,5.064-10.891-38.77-16.152h-1.127l19.408,
+35.833a4.473,4.473,0,0,0,2.062,1.688l27.425,12.377,17.817,18.942L366.285
+,189.6l12.283,23.254Z"
+      transform="translate(2832.419 3854.582)"
+    />
+    <path
+      id="Path_2"
+      data-name="Path 2"
+      class="cls-2"
+      d="M571.7,194.435s-1.126-2-6.813-3.876l-65.416-24.41s-9.468-4.782-15.344
+,3.845c0,0-2.189,4.218-.594,7.782,0,0,1.874,4.969,6.75,6.47l46.93,17.627
+L490.282,219.5c-4.876,1.5-6.75,6.47-6.75,6.47-1.6,3.563.594,7.781.594,7.
+781,5.875,8.627,15.344,3.845,15.344,3.845l65.416-24.41c5.688-1.875,6.813
+-3.876,6.813-3.876,2.187-3.126,1.8-7.439,1.8-7.439S573.885,197.561,571.7
+,194.435Z"
+      transform="translate(2852.258 3862.28)"
+    />
+    <path
+      id="Path_3"
+      data-name="Path 3"
+      class="cls-2"
+      d="M316.955,219.375l-46.928-17.628,46.928-17.628c4.875-1.5,6.753-6.47,6.
+753-6.47,1.593-3.561-.6-7.781-.6-7.781-5.875-8.627-15.344-3.845-15.344-3
+.845l-65.416,24.41c-5.687,1.875-6.814,3.876-6.814,3.876-2.188,3.127-1.79
+4,7.438-1.794,7.438s-.394,4.313,1.794,7.442c0,0,1.129,2,6.814,3.873l65.4
+16,24.41s9.469,4.782,15.344-3.843c0,0,2.191-4.221.6-7.784C323.707,225.84
+6,321.83,220.876,316.955,219.375Z"
+      transform="translate(2823.794
+3862.266)"
+    />
+  </g>
+
+  <!-- Elemento <rect>
+Además del elemento <path>, tenemos a nuestra disposición también el elemento <rect>, el
+cual nos permite representar un rectángulo (o alguna variación de éstos) dentro de SVG. -->
+  <rect width="400" height="200" class="rectangulo" />
+
+  <!-- Como podemos ver, las coordenadas están definidas por cx (con el valor 100), cy (con el
+valor de 100 también) y un radio r (con el valor de 96). Junto con definir un color de fondo
+púrpura a través de la clase circulo, también definimos un borde de color rojo con la
+propiedad stroke y el ancho del borde de 5 píxeles mediante stroke-width. -->
+  <circle class="circulo" cx="100" cy="100" r="96" />
+
+  <!-- Para definir las coordenadas del polígono, nos valemos de la propiedad points, en donde
+definimos las mismas a través de pares (x,y). En este caso, la primera coordenada es 100,10,
+la segunda es 40,198 y así con el resto. -->
+  <polygon points="100,10 40,198 190,78 10,78 160,198" class="estrella" />
+</svg>
